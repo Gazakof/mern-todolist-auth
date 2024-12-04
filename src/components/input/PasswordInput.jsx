@@ -8,4 +8,4 @@ const PasswordInput = ({ value, onChange, placeholder }) => {
   )
 }
 
-export default PasswordInput
+xport default PasswordInput
