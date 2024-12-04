@@ -22,7 +22,6 @@ const Login = () => {
                 Not register yet?{" "}
                 <Link to="/signup" className='font-medium text-primary underline'>
                   Create an Account
-                  sd
                 </Link>
               </p>
             </form>
