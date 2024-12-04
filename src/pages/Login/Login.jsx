@@ -12,6 +12,9 @@ const Login = () => {
                 Login
               </h4>
               <input type='text' placeholder='Email' className='input-box' />
+              <button type='submit' className='btn-primary'>
+                Login
+              </button>
             </form>
           </di>
         </div>
