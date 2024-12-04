@@ -17,6 +17,9 @@ const Login = () => {
               </button>
               <p className='text-sm text-center mt-4'>
                 Not register yet?{""}
+                <Link to="/signup" className=''>
+                  Create an Account
+                </Link>
               </p>
             </form>
           </di>
