@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
+import { Link } from "react-router-dom"
 
 const Login = () => {
   return (
     <>
         <Navbar />
         <div className='flex items-center justify-center mt-24'>
-          <di>
+          <div>
             <form onSubmit={() => {}}>
               <h4 className='text-2xl mb-7'>
                 Login
@@ -22,7 +23,7 @@ const Login = () => {
                 </Link>
               </p>
             </form>
-          </di>
+          </div>
         </div>
     </>
   )
