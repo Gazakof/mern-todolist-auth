@@ -15,6 +15,9 @@ const Login = () => {
               <button type='submit' className='btn-primary'>
                 Login
               </button>
+              <p className='text-sm text-center mt-4'>
+                Not register yet?{""}
+              </p>
             </form>
           </di>
         </div>
