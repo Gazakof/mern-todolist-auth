@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <>
         <Navbar />
-        <div>
+        <div className='flex items-center justify-center mt-24'>
           <di>
             <form onSubmit={() => {}}>
               <h4 className='text-2xl mb-7'>
