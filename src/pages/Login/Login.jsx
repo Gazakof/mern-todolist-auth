@@ -16,7 +16,7 @@ const Login = () => {
               <input type='text' placeholder='Email' className='input-box' />
               <PasswordInput />
               <button type='submit' className='btn-primary'>
-                Loginnn
+                Login
               </button>
               <p className='text-sm text-center mt-4'>
                 Not register yet?{" "}
