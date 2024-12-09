@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Navbar from '../../components/navbar/Navbar'
 import { Link } from "react-router-dom"
 import PasswordInput from '../../components/Input/PasswordInput'
 import { validateEmail } from '../../utils/helper'
+import Navbar from '../../components/Navigationbar/Navbar'
 
 const Login = () => {
 
