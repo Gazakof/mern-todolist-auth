@@ -5,7 +5,7 @@ const AddEditNotes = () => {
     <>
       <div>
         <div className="flex flex-col gap-2">
-          <label className="input-label">Titel</label>
+          <label className="input-label">Title</label>
           <input
             type="text"
             className="text-2xl text-slate-950 outline-none"
