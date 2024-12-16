@@ -21,7 +21,9 @@ const TagInput = ({ tags, setTags }) => {
     }
   };
 
-  const handleRemoveTag = (tagRemove) => {};
+  const handleRemoveTag = (tagRemove) => {
+    setTags(tags.filter((tag) => tag !== tagRemove));
+  };
 
   return (
     <>
@@ -31,7 +33,11 @@ const TagInput = ({ tags, setTags }) => {
             {tags.map((tag, index) => (
               <span key={index} className="">
                 # {tag}
-                <button onClick={() => {}}>
+                <button
+                  onClick={() => {
+                    handleRemoveTag;
+                  }}
+                >
                   <MdClose />
                 </button>
               </span>
