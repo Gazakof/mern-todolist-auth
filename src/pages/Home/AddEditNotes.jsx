@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import TagInput from "../../components/Input/TagInput";
 
 const AddEditNotes = () => {
+  const [title, setTitle] = useState("");
+
   return (
     <>
       <div>
