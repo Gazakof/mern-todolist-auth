@@ -3,6 +3,8 @@ import TagInput from "../../components/Input/TagInput";
 
 const AddEditNotes = () => {
   const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [tags, setTags] = useState([]);
 
   return (
     <>
