@@ -35,7 +35,7 @@ const TagInput = ({ tags, setTags }) => {
                 # {tag}
                 <button
                   onClick={() => {
-                    handleRemoveTag;
+                    handleRemoveTag(tag);
                   }}
                 >
                   <MdClose />
