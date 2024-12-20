@@ -49,6 +49,8 @@ const Home = () => {
         className="w-[50%] max-h-3/4 bg-white rounded-md mx-auto mt-16 p-5 overflow-scroll"
       >
         <AddEditNotes
+          type={openAddEditModal.type}
+          noteData={openAddEditModal.data}
           onClose={() => {
             setOpenAddEditModal({ isShown: false, type: "add", data: null });
           }}
