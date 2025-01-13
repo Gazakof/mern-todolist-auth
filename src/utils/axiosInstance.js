@@ -9,4 +9,13 @@ const axiosInsance = axios.create({
   },
 });
 
+axiosInsance.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 export default axiosInsance;
