@@ -1,15 +1,15 @@
 import axios from "axios";
 import { BASE_URL } from "./constants";
 
-const axiosInsance = axios.create({
-  baseUrl: BASE_URL,
+const axiosInstance = axios.create({
+  baseURL: BASE_URL,
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-axiosInsance.interceptors.request.use(
+axiosInstance.interceptors.request.use(
   (config) => {
     return config;
   },
@@ -18,4 +18,4 @@ axiosInsance.interceptors.request.use(
   }
 );
 
-export default axiosInsance;
+export default axiosInstance;

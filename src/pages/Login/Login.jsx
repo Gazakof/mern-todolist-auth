@@ -3,13 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import PasswordInput from "../../components/Input/PasswordInput";
 import { validateEmail } from "../../utils/helper";
 import Navbar from "../../components/Navigationbar/Navbar";
-import axiosInsance from "../../utils/axiosInstance";
+import axiosInstance from "../../utils/axiosInstance";
 
 const Login = () => {
+  const navigate = useNavigate;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const navigate = useNavigate;
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,21 +28,30 @@ const Login = () => {
 
     //Login API call
     try {
-      const response = await axiosInsance.post("/login", {
+      const response = await axiosInstance.post("/login", {
         email: email,
         password: password,
       });
 
       if (response.data) {
+        console.log("data ok");
         navigate("/dashboard");
       }
     } catch (error) {
-      if (error.response) {
+      if (
+        error.response &&
+        error.response.data &&
+        error.response.data.message
+      ) {
         setError(error.response.data.message);
       } else {
         setError("An unexpected error occurred. Please try again.");
       }
     }
+  };
+
+  const click = () => {
+    navigate("/signup");
   };
 
   return (
@@ -77,6 +86,12 @@ const Login = () => {
               <Link to="/signup" className="font-medium text-primary underline">
                 Create an Account
               </Link>
+            </p>
+            <p
+              className="font-medium text-red-600 underline cursor-pointer"
+              onClick={click}
+            >
+              Create an Account
             </p>
           </form>
         </div>
