@@ -6,10 +6,10 @@ import Navbar from "../../components/Navigationbar/Navbar";
 import axiosInstance from "../../utils/axiosInstance";
 
 const Login = () => {
-  const navigate = useNavigate;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -34,7 +34,6 @@ const Login = () => {
       });
 
       if (response.data) {
-        console.log("data ok");
         navigate("/dashboard");
       }
     } catch (error) {
@@ -48,10 +47,6 @@ const Login = () => {
         setError("An unexpected error occurred. Please try again.");
       }
     }
-  };
-
-  const click = () => {
-    navigate("/signup");
   };
 
   return (
@@ -86,12 +81,6 @@ const Login = () => {
               <Link to="/signup" className="font-medium text-primary underline">
                 Create an Account
               </Link>
-            </p>
-            <p
-              className="font-medium text-red-600 underline cursor-pointer"
-              onClick={click}
-            >
-              Create an Account
             </p>
           </form>
         </div>
