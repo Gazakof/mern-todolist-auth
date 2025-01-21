@@ -34,6 +34,7 @@ const Login = () => {
       });
 
       if (response.data) {
+        localStorage.setItem("token", response.data.accessToken);
         navigate("/dashboard");
       }
     } catch (error) {
