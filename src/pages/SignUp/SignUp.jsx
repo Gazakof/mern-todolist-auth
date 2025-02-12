@@ -20,7 +20,7 @@ const SignUp = () => {
       return;
     }
 
-    if (!validateEmail || !email) {
+    if (!validateEmail(email)) {
       setError("Please enter a valide email adress.");
       return;
     }
@@ -39,10 +39,12 @@ const SignUp = () => {
         email: email,
         password: password,
       });
+
       if (response.data && response.data.error) {
         setError(response.data.message);
         return;
       }
+
       if (response.data && response.data.accessToken) {
         localStorage.setItem("token", response.data.accessToken);
         navigate("/dashboard");
@@ -55,7 +57,7 @@ const SignUp = () => {
       ) {
         setError(error.response.data.message);
       } else {
-        setError("An unexpected error occured. Please try again.");
+        setError("An unexpected error occurred. Please try again.");
       }
     }
   };

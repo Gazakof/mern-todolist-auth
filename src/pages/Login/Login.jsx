@@ -33,7 +33,7 @@ const Login = () => {
         password: password,
       });
 
-      if (response.data) {
+      if (response.data && response.data.accessToken) {
         localStorage.setItem("token", response.data.accessToken);
         navigate("/dashboard");
       }
