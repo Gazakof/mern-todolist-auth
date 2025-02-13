@@ -37,7 +37,7 @@ const Home = () => {
     });
   };
 
-  const handleCloaseToast = () => {
+  const handleCloseToast = () => {
     setShowToastMsg({
       isShown: false,
       message: "",
@@ -121,6 +121,7 @@ const Home = () => {
             setOpenAddEditModal({ isShown: false, type: "add", data: null });
           }}
           getAllNotes={getAllNotes}
+          showToastMessage={showToastMessage}
         />
       </Modal>
 
@@ -128,7 +129,7 @@ const Home = () => {
         isShown={showToastMsg.isShown}
         message={showToastMsg.message}
         type={showToastMsg.type}
-        onClose={handleCloaseToast}
+        onClose={handleCloseToast}
       />
     </>
   );
